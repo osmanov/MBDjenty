@@ -1,3 +1,7 @@
-module.exports=function(message){
-  console.log(message)
-};
+class Button{
+  constructor(message){
+    console.log(message)
+  }
+}
+
+export default Button;

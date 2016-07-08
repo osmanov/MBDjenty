@@ -1,4 +1,9 @@
-var button=require('./button');
-button('hello');
+import Button from './button.js';
 
-exports.button=button;
+class List{
+  getItem(){
+    return Button('hello');
+  }
+}
+
+export default List;

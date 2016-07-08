@@ -1,4 +1,5 @@
 var NODE_ENV=process.env.NODE_ENV || 'development';
+var webpack=require('webpack');
 
 module.exports = {
   entry: './src/list',
@@ -7,6 +8,12 @@ module.exports = {
     filename: 'index.js',
     library:'list'
   },
-  watch:true,
-  devtool:'source-map'
+  watch:NODE_ENV==='development',
+  devtool:'source-map',
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      loaders: ['babel'],
+    }]
+  }
 };
