@@ -6,6 +6,11 @@
   "scripts": {
     "test": "ava \"src/*.spec.js\" --verbose"
   },
+  "ava": {
+    "require": [
+      "./setup-test-env.js"
+    ]
+  },
   "author": "osmanov",
   "license": "ISC",
   "devDependencies": {
@@ -14,6 +19,7 @@
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
     "babel-preset-es2015": "^6.9.0",
+    "jsdom": "^9.4.1",
     "webpack": "^1.13.1"
   }
 }
