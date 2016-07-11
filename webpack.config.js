@@ -2,11 +2,10 @@ var NODE_ENV=process.env.NODE_ENV || 'development';
 var webpack=require('webpack');
 
 module.exports = {
-  entry: './src/list',
+  entry: './src/HighlighterButton',
   output: {
     path: __dirname+'/dist',
-    filename: 'index.js',
-    library:'list'
+    filename: 'index.js'
   },
   watch:NODE_ENV==='development',
   devtool:'source-map',
@@ -15,5 +14,8 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
     }]
+  },
+  externals:{
+    "medium-editor":"MediumEditor"
   }
 };
