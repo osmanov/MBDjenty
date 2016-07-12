@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/HighlighterButton',
   output: {
     path: __dirname+'/dist',
-    filename: 'index.js'
+    filename: 'index.js',
+    library:'HighlighterButton'
   },
   watch:NODE_ENV==='development',
   devtool:'source-map',

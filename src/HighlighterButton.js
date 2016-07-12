@@ -7,6 +7,13 @@ var HighlighterButton = MediumEditor.Extension.extend({
     this.button = this.document.createElement('button');
     this.button.classList.add('medium-editor-action');
     this.button.innerHTML = '<b>H</b>';
+    this._listen();
+  },
+
+  _listen:function(){
+    this.button.addEventListener('click',function(ev){
+      this.classList.add('clicked');
+    });
   },
 
   getButton: function () {
