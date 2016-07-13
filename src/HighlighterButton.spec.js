@@ -18,9 +18,12 @@ let extension=me.getExtensionByName('highlighter');
 
 //TODO check document mouseout
 
-test('General button has clicked', t => {
+test('long time press by general type button', t => {
   let button=extension.getButton();
-  button.click();
-  t.true(button.classList.contains('clicked'));
+  var event = new Event("mousedown");
+  button.dispatchEvent(event);
+  t.true(button.classList.contains('clicking'));
+
+
 });
 
