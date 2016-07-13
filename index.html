@@ -14,12 +14,41 @@
     <p>I give Pirrip as my father’s family name, on the authority of his tombstone and my sister,—Mrs. Joe Gargery, who married the blacksmith. As I never saw my father or my mother, and never saw any likeness of either of them (for their days were long before the days of photographs), my first fancies regarding what they were like were unreasonably derived from their tombstones...</p>
 </div>
 <script>
+
+  /*  function foo(){
+        this.button = document.createElement('button');
+        this.button.classList.add('medium-editor-action');
+        //this.button.hidden=true;
+        this.button.innerHTML = '<b>thall</b>';
+    }
+
+    foo.prototype.getButton=function(){
+        return this.button;
+    };*/
+
+    class foo{
+
+        constructor(){
+
+            this.button = document.createElement('button');
+            this.button.classList.add('medium-editor-action');
+            //this.button.hidden=true;
+            this.button.innerHTML = '<b>thallee</b>';
+        }
+
+        getButton() {
+
+            return this.button;
+        }
+    }
+
     var editor = new MediumEditor('.editable', {
         toolbar: {
-            buttons: ['bold', 'italic', 'underline', 'highlighter']
+            buttons: ['bold', 'italic',  'mbthally']
         },
         extensions: {
-            'highlighter': new HighlighterButton()
+            //'mbdjenty': new HighlighterButton(),
+            'mbthally': new foo()
         }
     });
 </script>

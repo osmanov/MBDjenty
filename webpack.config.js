@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: __dirname+'/dist',
     filename: 'index.js',
-    library:'HighlighterButton'
+    library:['MBThally']
   },
   watch:NODE_ENV==='development',
   devtool:'source-map',
