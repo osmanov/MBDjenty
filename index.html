@@ -15,7 +15,7 @@
 </div>
 <script>
 
-  /*  function foo(){
+    function foo(){
         this.button = document.createElement('button');
         this.button.classList.add('medium-editor-action');
         //this.button.hidden=true;
@@ -24,31 +24,16 @@
 
     foo.prototype.getButton=function(){
         return this.button;
-    };*/
+    };
 
-    class foo{
-
-        constructor(){
-
-            this.button = document.createElement('button');
-            this.button.classList.add('medium-editor-action');
-            //this.button.hidden=true;
-            this.button.innerHTML = '<b>thallee</b>';
-        }
-
-        getButton() {
-
-            return this.button;
-        }
-    }
 
     var editor = new MediumEditor('.editable', {
         toolbar: {
-            buttons: ['bold', 'italic',  'mbthally']
+            buttons: ['bold', 'italic','underline', 'myMegaBtn1']
         },
         extensions: {
-            //'mbdjenty': new HighlighterButton(),
-            'mbthally': new foo()
+            'myMegaBtn1': new MBDjenty({top:'italic'}),
+            //'mbthally': new foo()
         }
     });
 </script>

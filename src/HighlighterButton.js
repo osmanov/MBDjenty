@@ -40,15 +40,20 @@ function buttonFabric(){
     }
   })
 }
+import MBThally from './MBThally';
 
-
+/*
 const HighlighterButton = MediumEditor.Extension.extend({
   name: 'mbdjenty',
 
+  getThally:function(){
+    return MBThally;
+  },
   init: function () {
     this.button = this.document.createElement('button');
     this.button.classList.add('medium-editor-action');
     this.button.innerHTML = '<b>H</b>';
+    //this.button.style.display='none';
   },
 
   _emit:function(evName){
@@ -64,9 +69,9 @@ const HighlighterButton = MediumEditor.Extension.extend({
   },
 
   _listen:function(){
-    /*this._pub('press',()=>{
+  this._pub('press',()=>{
 
-    });*/
+    });
 
     let timer;
     this.button.addEventListener('mousedown',(ev)=>{
@@ -86,5 +91,16 @@ const HighlighterButton = MediumEditor.Extension.extend({
   }
 });
 
-module.exports=HighlighterButton;
+module.exports=HighlighterButton;*/
 
+class HighlighterButton{
+  constructor(){
+    this.button = document.createElement('button');
+    this.button.classList.add('medium-editor-action');
+    this.button.innerHTML = '<b>H</b>';
+  }
+  getButton() {
+    return this.button;
+  }
+}
+module.exports=HighlighterButton;
