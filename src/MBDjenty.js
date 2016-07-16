@@ -17,7 +17,7 @@ class MBDjenty{
   checkState(node){
     //console.log(node);
     //console.log(this)
-
+    console.log(this.base.getExtensionByName('italic'))
   }
 
   getButton() {

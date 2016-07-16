@@ -2,11 +2,11 @@ var NODE_ENV=process.env.NODE_ENV || 'development';
 var webpack=require('webpack');
 
 module.exports = {
-  entry: './src/MBDjenty',
+  entry: './src/Fake',
   output: {
     path: __dirname+'/dist',
     filename: 'index.js',
-    library:'MBDjenty'
+    library:'Fake'
   },
   watch:NODE_ENV==='development',
   devtool:'source-map',
